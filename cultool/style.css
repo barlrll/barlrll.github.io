@@ -119,12 +119,13 @@ body {
 }
 
 [class|=main__group__button] {
-    padding: 0.7em;
+    padding: 0.4em;
     background-color: #333333;
     border: none;
     border-radius: 0.5em;
     color: #ffffff;
     cursor: pointer;
+    font-size: 1em;
 }
 
 .main__group__button--big {
