@@ -1,1 +1,105 @@
-
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cultool - Bouncy ball</title>
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <main class="main">
+            <div class="main__group">
+                <div class="main__group__title">スーパーボール</div>
+            </div>
+            <div class="main__group">
+                <div class="main__group__title">結果</div>
+                <div class="main__group--row main__group--stretch">
+                    <div class="main__group_text">大</div>
+                    <div
+                        class="main__group__subgroup--row main__group__subgroup--stretch"
+                    >
+                        <input
+                            class="main__group__textInput main__group__numberInput"
+                            type="number"
+                            id="result1"
+                            name="result1"
+                            min="0"
+                            step="1"
+                            inputmode="numeric"
+                            placeholder="0以上の数値"
+                        />
+                    </div>
+                </div>
+                <div class="main__group--row main__group--stretch">
+                    <div class="main__group_text">中</div>
+                    <div
+                        class="main__group__subgroup--row main__group__subgroup--stretch"
+                    >
+                        <input
+                            class="main__group__textInput main__group__numberInput"
+                            type="number"
+                            id="result2"
+                            name="result2"
+                            min="0"
+                            step="1"
+                            inputmode="numeric"
+                            placeholder="0以上の数値"
+                        />
+                    </div>
+                </div>
+                <div class="main__group--row main__group--stretch">
+                    <div class="main__group_text">小</div>
+                    <div
+                        class="main__group__subgroup--row main__group__subgroup--stretch"
+                    >
+                        <input
+                            class="main__group__textInput main__group__numberInput"
+                            type="number"
+                            id="result3"
+                            name="result3"
+                            min="0"
+                            step="1"
+                            inputmode="numeric"
+                            placeholder="0以上の数値"
+                        />
+                    </div>
+                </div>
+            </div>
+            <div class="main__group">
+                <div class="main__group__title">点数</div>
+                <div class="main__group__text--big" id="scoreDisplay">?</div>
+            </div>
+            <div class="main__group--spacer"></div>
+            <div class="main__group">
+                <button
+                    class="main__group__button"
+                    type="button"
+                    id="clearInput"
+                >
+                    入力内容をクリア
+                </button>
+            </div>
+            <div class="main__group">
+                <button
+                    class="main__group__button"
+                    type="button"
+                    id="restoreInput"
+                    disabled
+                >
+                    入力内容を復元
+                </button>
+            </div>
+            <div class="main__group--spacer-large"></div>
+            <div class="main__group">
+                <button
+                    class="main__group__button"
+                    type="button"
+                    id="returnTop"
+                >
+                    戻る
+                </button>
+            </div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
