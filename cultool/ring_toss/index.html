@@ -1,1 +1,194 @@
-
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cultool - Ring toss</title>
+        <link rel="stylesheet" href="../style.css" />
+    </head>
+    <body>
+        <main class="main">
+            <div class="main__group">
+                <div class="main__group__title">輪投げ</div>
+            </div>
+            <div class="main__group">
+                <div class="main__group__title">難易度</div>
+                <div class="main__group--row main__group--stretch">
+                    <div
+                        class="main__group__subgroup--row main__group__subgroup--stretch"
+                    >
+                        <button
+                            class="main__group__button--choice main__group__button"
+                            type="button"
+                            id="diffuiculty1"
+                            data-choice-group="difficulty"
+                            value="1"
+                            aria-pressed="false"
+                        >
+                            低
+                        </button>
+                        <button
+                            class="main__group__button--choice main__group__button"
+                            type="button"
+                            id="difficulty2"
+                            data-choice-group="difficulty"
+                            value="2"
+                            aria-pressed="false"
+                        >
+                            高
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="main__group">
+                <div class="main__group__title">結果</div>
+                <div class="main__group--row main__group--stretch">
+                    <div class="main__group_text">#1</div>
+                    <div
+                        class="main__group__subgroup--row main__group__subgroup--stretch"
+                    >
+                        <button
+                            class="main__group__button--choice main__group__button--big"
+                            type="button"
+                            id="result1_1"
+                            data-choice-group="result1"
+                            value="1"
+                            aria-pressed="false"
+                        >
+                            ◎
+                        </button>
+                        <button
+                            class="main__group__button--choice main__group__button--big"
+                            type="button"
+                            id="result1_2"
+                            data-choice-group="result1"
+                            value="2"
+                            aria-pressed="false"
+                        >
+                            ◯
+                        </button>
+                        <button
+                            class="main__group__button--choice main__group__button--big"
+                            type="button"
+                            id="result1_3"
+                            data-choice-group="result1"
+                            value="3"
+                            aria-pressed="false"
+                        >
+                            ×
+                        </button>
+                    </div>
+                </div>
+                <div class="main__group--row main__group--stretch">
+                    <div class="main__group_text">#2</div>
+                    <div
+                        class="main__group__subgroup--row main__group__subgroup--stretch"
+                    >
+                        <button
+                            class="main__group__button--choice main__group__button--big"
+                            type="button"
+                            id="result2_1"
+                            data-choice-group="result2"
+                            value="1"
+                            aria-pressed="false"
+                        >
+                            ◎
+                        </button>
+                        <button
+                            class="main__group__button--choice main__group__button--big"
+                            type="button"
+                            id="result2_2"
+                            data-choice-group="result2"
+                            value="2"
+                            aria-pressed="false"
+                        >
+                            ◯
+                        </button>
+                        <button
+                            class="main__group__button--choice main__group__button--big"
+                            type="button"
+                            id="result2_3"
+                            data-choice-group="result2"
+                            value="3"
+                            aria-pressed="false"
+                        >
+                            ×
+                        </button>
+                    </div>
+                </div>
+                <div class="main__group--row main__group--stretch">
+                    <div class="main__group_text">#3</div>
+                    <div
+                        class="main__group__subgroup--row main__group__subgroup--stretch"
+                    >
+                        <button
+                            class="main__group__button--choice main__group__button--big"
+                            type="button"
+                            id="result3_1"
+                            data-choice-group="result3"
+                            value="1"
+                            aria-pressed="false"
+                        >
+                            ◎
+                        </button>
+                        <button
+                            class="main__group__button--choice main__group__button--big"
+                            type="button"
+                            id="result3_2"
+                            data-choice-group="result3"
+                            value="2"
+                            aria-pressed="false"
+                        >
+                            ◯
+                        </button>
+                        <button
+                            class="main__group__button--choice main__group__button--big"
+                            type="button"
+                            id="result3_3"
+                            data-choice-group="result3"
+                            value="3"
+                            aria-pressed="false"
+                        >
+                            ×
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="main__group">
+                <div class="main__group__title">点数</div>
+                <div class="main__group__text--big" id="scoreDisplay">?</div>
+            </div>
+            <div class="main__group--spacer"></div>
+            <div class="main__group">
+                <button
+                    class="main__group__button"
+                    type="button"
+                    id="clearInput"
+                >
+                    入力内容をクリア
+                </button>
+            </div>
+            <div class="main__group">
+                <button
+                    class="main__group__button"
+                    type="button"
+                    id="restoreInput"
+                    disabled
+                >
+                    入力内容を復元
+                </button>
+            </div>
+            <div class="main__group--spacer-large"></div>
+            <div class="main__group">
+                <button
+                    class="main__group__button"
+                    type="button"
+                    id="returnTop"
+                >
+                    戻る
+                </button>
+            </div>
+        </main>
+        <script src="./script.js"></script>
+    </body>
+</html>
