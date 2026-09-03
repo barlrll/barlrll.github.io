@@ -53,7 +53,7 @@ function clearInputs() {
         input.value = '';
     });
 
-    document.getElementById('scoreDisplay').textContent = '?';
+    document.getElementById('scoreDisplay').textContent = '0';
     document.getElementById('restoreInput').disabled = false;
 }
 

@@ -80,6 +80,11 @@ body {
     font-size: 1.1em;
 }
 
+.main__group__text--muted{
+    font-size: 0.8em;
+    color: #bbbbbb;
+}
+
 .main__group__text--big {
     font-size: 1.3em;
 }
