@@ -34,11 +34,6 @@ function calculateScore() {
     const result3 = getInputValue('result3');
     const scoreDisplay = document.getElementById('scoreDisplay');
 
-    if (result1 === null || result2 === null || result3 === null) {
-        scoreDisplay.textContent = '?';
-        return;
-    }
-
     scoreDisplay.textContent = result1 * 300 + result2 * 100 + result3 * 20;
 }
 
