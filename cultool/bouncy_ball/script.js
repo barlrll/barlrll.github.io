@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.getElementById('clearInput').addEventListener('click', clearInputs);
-    document.getElementById('restoreInput').addEventListener('click', restoreInputs);
     document.getElementById('returnTop').addEventListener('click', function () {
         window.location.href = './../';
     });
@@ -49,7 +48,21 @@ function clearInputs() {
         };
     }
 
-    //localStorage.setItem("history", "Taro");
+    const score = document.getElementById("scoreDisplay").textContent;
+    const nowHistory = JSON.parse(localStorage.getItem("bouncy_ball_history"));
+    let newHistory = nowHistory;
+    if (nowHistory === null) {
+        newHistory = []
+    }
+
+    newHistory.push(
+        {
+            time: Date.now(),
+            score: score
+        }
+    )
+
+    localStorage.setItem("bouncy_ball_history", JSON.stringify(newHistory));
 
 
     document.querySelectorAll('.main__group__numberInput').forEach(function (input) {
@@ -71,4 +84,11 @@ function restoreInputs() {
     document.getElementById('scoreDisplay').textContent = previousInputState.score;
     previousInputState = null;
     document.getElementById('restoreInput').disabled = true;
+}
+
+function displayHistory() {
+    const nowHistory = JSON.parse(localStorage.getItem("bouncy_ball_history"))
+    const historyDisplay = document.getElementById("historyDisplay");
+    const historyRow = document.createElement("div");
+    historyRow.textContent = 
 }
