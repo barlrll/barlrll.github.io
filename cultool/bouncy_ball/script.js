@@ -49,6 +49,9 @@ function clearInputs() {
         };
     }
 
+    //localStorage.setItem("history", "Taro");
+
+
     document.querySelectorAll('.main__group__numberInput').forEach(function (input) {
         input.value = '';
     });
