@@ -7,6 +7,8 @@ body {
     margin: 0;
     box-sizing: border-box;
     font-family: "M PLUS 1p", sans-serif;
+    touch-action: pan-x pan-y;
+    font-size: 16px;
 }
 
 *,
@@ -37,7 +39,7 @@ body {
     margin: 10px;
     gap: 10px;
     background-color: #000000;
-    border-radius: 1em;
+    border-radius: 1rem;
     border: 3px solid #666666;
     width: min(70%, 640px);
 }
@@ -55,16 +57,16 @@ body {
 
 .main__group--spacer {
     width: 100%;
-    height: 2.5em;
+    height: 2.5rem;
     flex-shrink: 0;
 }
 
 .main__group--spacer-small {
-    height: 1em;
+    height: 1rem;
 }
 
 .main__group--spacer-large {
-    height: 5em;
+    height: 5rem;
 }
 
 .main__group--row>[class|=main__group__button] {
@@ -73,20 +75,20 @@ body {
 }
 
 .main__group__title {
-    font-size: 1.5em;
+    font-size: 1.5rem;
 }
 
 .main__group__text {
-    font-size: 1.1em;
+    font-size: 1.1rem;
 }
 
 .main__group__text--muted{
-    font-size: 0.8em;
+    font-size: 0.8rem;
     color: #999999;
 }
 
 .main__group__text--big {
-    font-size: 1.3em;
+    font-size: 1.3rem;
 }
 
 [class|=main__group__subgroup] {
@@ -98,7 +100,7 @@ body {
     padding: 10px;
     background-color: #1a1a1a;
     border: 1px solid #555555;
-    border-radius: 0.6em;
+    border-radius: 0.6rem;
 }
 
 .main__group__subgroup--row {
@@ -119,25 +121,25 @@ body {
 }
 
 [class|=main__group__button] {
-    padding: 0.4em;
+    padding: 0.4rem;
     background-color: #333333;
     border: none;
-    border-radius: 0.5em;
+    border-radius: 0.5rem;
     color: #ffffff;
     cursor: pointer;
-    font-size: 1em;
+    font-size: 1rem;
 }
 
 .main__group__button--big {
-    padding: 0.9em;
-    font-size: 1.2em;
+    padding: 0.9rem;
+    font-size: 1.2rem;
 }
 
 .main__group__button--choice {
     flex: 1 1 0;
     min-width: 0;
     width: 100%;
-    padding: 0.5em 0.8em;
+    padding: 0.5rem 0.8rem;
     border: 2px solid #555555;
 }
 
@@ -162,10 +164,10 @@ body {
 .main__group__textInput {
     background-color: #333333;
     color: #fff;
-    height: 1em;
+    height: 1rem;
     font-family: monospace;
-    padding: 0.5em;
-    border-radius: 0.5em;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
     border: none
 }
 
@@ -173,8 +175,8 @@ body {
     flex: 1 1 auto;
     width: 100%;
     min-width: 0;
-    min-height: 2.5em;
-    font-size: 1.2em;
+    min-height: 2.5rem;
+    font-size: 1.2rem;
 }
 
 .hidden {
@@ -193,6 +195,6 @@ body {
     }
 
     .main__group__button--big {
-        padding: 1em;
+        padding: 1rem;
     }
 }
