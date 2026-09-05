@@ -62,7 +62,7 @@ function clearInputs() {
     )
 
     localStorage.setItem("bouncy_ball_history", JSON.stringify(newHistory));
-
+    */
 
     document.querySelectorAll('.main__group__numberInput').forEach(function (input) {
         input.value = '';
@@ -70,7 +70,7 @@ function clearInputs() {
 
     document.getElementById('scoreDisplay').textContent = '0';
     document.getElementById('restoreInput').disabled = false;
-    */
+    
 }
 
 function restoreInputs() {
