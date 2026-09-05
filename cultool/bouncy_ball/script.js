@@ -30,10 +30,9 @@ function getInputValue(inputId) {
 function calculateScore() {
     const result1 = getInputValue('result1');
     const result2 = getInputValue('result2');
-    const result3 = getInputValue('result3');
     const scoreDisplay = document.getElementById('scoreDisplay');
 
-    scoreDisplay.textContent = result1 * 300 + result2 * 100 + result3 * 20;
+    scoreDisplay.textContent = result1 * 200 + result2 * 30;
 }
 
 function clearInputs() {
@@ -47,7 +46,7 @@ function clearInputs() {
             score: document.getElementById('scoreDisplay').textContent,
         };
     }
-
+    /*
     const score = document.getElementById("scoreDisplay").textContent;
     const nowHistory = JSON.parse(localStorage.getItem("bouncy_ball_history"));
     let newHistory = nowHistory;
@@ -71,6 +70,7 @@ function clearInputs() {
 
     document.getElementById('scoreDisplay').textContent = '0';
     document.getElementById('restoreInput').disabled = false;
+    */
 }
 
 function restoreInputs() {
@@ -85,10 +85,10 @@ function restoreInputs() {
     previousInputState = null;
     document.getElementById('restoreInput').disabled = true;
 }
-
+/*
 function displayHistory() {
     const nowHistory = JSON.parse(localStorage.getItem("bouncy_ball_history"))
     const historyDisplay = document.getElementById("historyDisplay");
     const historyRow = document.createElement("div");
     historyRow.textContent = 
-}
+}*/
