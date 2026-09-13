@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>MIDI Viewer</title>
+        <link rel="stylesheet" href="style.css" />
+        <script src="https://unpkg.com/tone"></script>
+        <script src="https://unpkg.com/@tonejs/midi"></script>
+    </head>
+    <body>
+        <main class="main">
+            <div class="main__top-group main__group">
+                <div class="main__group__title">MIDI Viewer</div>
+                <div class="main__group main__group--row">
+                    <div class="main__group--decorated">
+                        <label for="inputMidi">MIDIファイル: </label>
+                        <input
+                            type="file"
+                            id="inputMidi"
+                            accept=".mid audio/midi"
+                        />
+                    </div>
+                    <button class="main__button" id="drawButton">描画</button>
+                </div>
+            </div>
+            <div class="main__top-group main__group">
+                <div class="main__group main__group--decorated">
+                    <div class="main__group__title">コントロール</div>
+                    <div class="main__group main__group--row">
+                        <button class="main__button" id="playButton">
+                            再生
+                        </button>
+                        <div class="info-bar">
+                            <span class="info-item">
+                                <span class="info-label">BPM</span>
+                                <span class="info-value" id="infoBpm">—</span>
+                            </span>
+                            <span class="info-sep">|</span>
+                            <span class="info-item">
+                                <span class="info-label">拍子</span>
+                                <span class="info-value" id="infoTimeSig">—</span>
+                            </span>
+                            <span class="info-sep">|</span>
+                            <span class="info-item">
+                                <span class="info-label">位置</span>
+                                <span class="info-value info-value--pos" id="infoClickPos">—</span>
+                            </span>
+                        </div>
+                        <div class="zoom-bar">
+                            <button class="main__button zoom-btn" id="zoomOut">−</button>
+                            <span class="zoom-level" id="zoomLevel">100%</span>
+                            <button class="main__button zoom-btn" id="zoomIn">+</button>
+                            <button class="main__button zoom-btn" id="zoomReset">1:1</button>
+                        </div>
+                    </div>
+                    <!-- 新規：表示設定パネル -->
+                    <div class="settings-panel">
+                        <div class="settings-row">
+                            <label class="settings-label" title="分母を固定します。小数になる場合は適用されません。">分母固定(空=自動): 
+                                <input type="number" id="fixedDenom" class="settings-input settings-input--num" min="1" max="128" placeholder="16">
+                            </label>
+                            <span class="settings-sep">|</span>
+                            <label class="settings-label" title="小節番号の表示をずらします。">小節オフセット: 
+                                <input type="number" id="offsetMeasure" class="settings-input settings-input--num" value="0">
+                            </label>
+                            <label class="settings-label" title="拍単位で表示をずらします。">拍オフセット: 
+                                <input type="number" id="offsetBeat" class="settings-input settings-input--num" value="0" step="0.5">
+                            </label>
+                        </div>
+                    </div>
+                    
+                    <div class="main__seekbar-wrap">
+                        <input
+                            type="range"
+                            id="seekBar"
+                            class="main__seekbar"
+                            min="0"
+                            max="100"
+                            step="0.01"
+                            value="0"
+                        />
+                    </div>
+                    
+                    <div class="track-panel-container">
+                        <div class="track-panel-header" id="trackPanelHeader">
+                            <span class="track-panel-title">トラック一覧</span>
+                            <span class="track-panel-toggle" id="trackPanelToggleIcon">▼</span>
+                        </div>
+                        <div id="trackPanel" class="track-panel"></div>
+                    </div>
+                </div>
+                <canvas
+                    class="main__canvas"
+                    id="drawCanvas"
+                    width="1920"
+                    height="1080"
+                ></canvas>
+            </div>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

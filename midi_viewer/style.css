@@ -1,0 +1,420 @@
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #111111;
+    min-height: 100dvh;
+    color: #ffffff;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.main__top-group {
+    padding: 10px;
+    margin: 10px;
+    background-color: #000000;
+    border-radius: 1em;
+    border: 3px solid #666666;
+    min-width: 250px;
+    width: 80%;
+}
+
+.main__group {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.main__group--decorated {
+    background-color: #222222;
+    border-radius: 1em;
+    padding: 0.3em 0.6em;
+}
+
+.main__group--row {
+    flex-direction: row;
+}
+
+.main__group__title {
+    font-size: 1.5em;
+}
+
+.main__button {
+    padding: 0.5em 0.8em;
+    background-color: #333333;
+    border: none;
+    border-radius: 0.5em;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+.main__button:hover {
+    background-color: #444444;
+}
+
+.main__canvas {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.main__seekbar-wrap {
+    width: 100%;
+    padding: 0.2em 0;
+}
+
+.main__seekbar {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 6px;
+    border-radius: 3px;
+    background: #444444;
+    outline: none;
+    cursor: pointer;
+}
+
+.main__seekbar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #aaaaaa;
+    cursor: pointer;
+    transition: background 0.15s;
+}
+
+.main__seekbar::-webkit-slider-thumb:hover {
+    background: #ffffff;
+}
+
+.main__seekbar::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    border: none;
+    border-radius: 50%;
+    background: #aaaaaa;
+    cursor: pointer;
+}
+
+.main__seekbar::-moz-range-thumb:hover {
+    background: #ffffff;
+}
+
+/* ---- 情報バー ---- */
+
+.info-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #1a1a1a;
+    border-radius: 0.5em;
+    padding: 4px 10px;
+    flex-wrap: wrap;
+}
+
+.info-item {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+}
+
+.info-label {
+    font-size: 0.7em;
+    color: #777;
+    letter-spacing: 0.03em;
+}
+
+.info-value {
+    font-size: 0.95em;
+    color: #ddd;
+    font-variant-numeric: tabular-nums;
+    min-width: 2.5em;
+}
+
+.info-value--pos {
+    font-family: monospace;
+    color: #aaddff;
+    min-width: 14em;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.info-sep {
+    color: #444;
+    font-size: 0.85em;
+    user-select: none;
+}
+
+/* ---- ズームバー ---- */
+
+.zoom-bar {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: #1a1a1a;
+    border-radius: 0.5em;
+    padding: 4px 8px;
+}
+
+.zoom-btn {
+    padding: 0.2em 0.5em;
+    font-size: 1em;
+    min-width: 2em;
+}
+
+.zoom-level {
+    font-size: 0.85em;
+    color: #ddd;
+    min-width: 3.5em;
+    text-align: center;
+    font-variant-numeric: tabular-nums;
+}
+
+/* ---- 設定パネル ---- */
+
+.settings-panel {
+    width: 100%;
+    margin-top: 8px;
+    background: #252525;
+    border-radius: 0.5em;
+    padding: 6px 12px;
+}
+
+.settings-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    align-items: center;
+    font-size: 0.85em;
+}
+
+.settings-label {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #bbb;
+}
+
+.settings-input {
+    background: #111;
+    border: 1px solid #444;
+    border-radius: 3px;
+    color: #fff;
+    padding: 2px 5px;
+    outline: none;
+}
+
+.settings-input:focus {
+    border-color: #777;
+}
+
+.settings-input--num {
+    width: 4em;
+    text-align: right;
+    font-variant-numeric: tabular-nums;
+}
+
+.settings-sep {
+    color: #555;
+    user-select: none;
+}
+
+/* ---- トラックパネル ---- */
+
+.track-panel-container {
+    margin-top: 10px;
+    background: #1a1a1a;
+    border-radius: 0.5em;
+    overflow: hidden;
+}
+
+.track-panel-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 12px;
+    background: #252525;
+    cursor: pointer;
+    user-select: none;
+    border-radius: 0.5em;
+}
+
+.track-panel-header:hover {
+    background: #333;
+}
+
+.track-panel-title {
+    font-size: 0.9em;
+    font-weight: bold;
+    color: #ddd;
+}
+
+.track-panel-toggle {
+    font-size: 0.8em;
+    color: #aaa;
+    transition: transform 0.2s ease;
+}
+
+.track-panel-toggle.collapsed {
+    transform: rotate(-90deg);
+}
+
+.track-panel {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    width: 100%;
+    max-height: 260px;
+    overflow-y: auto;
+    padding: 8px 10px;
+}
+
+.track-panel.collapsed {
+    display: none;
+}
+
+.track-panel:empty {
+    display: none;
+}
+
+.track-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 8px;
+    background: #1a1a1a;
+    border-radius: 0.5em;
+    padding: 5px 8px;
+    flex-wrap: wrap;
+}
+
+/* 表示/非表示ボタン */
+.track-btn--vis {
+    padding: 0.25em 0.6em;
+    background: #444;
+    border: none;
+    border-radius: 0.4em;
+    color: #888;
+    cursor: pointer;
+    font-size: 0.8em;
+    min-width: 3.8em;
+    transition: background 0.15s, color 0.15s;
+}
+
+.track-btn--vis.track-btn--active {
+    color: #fff;
+    background: #3a6a3a;
+}
+
+.track-btn--vis:hover {
+    background: #555;
+}
+
+/* トラック名 */
+.track-label {
+    font-size: 0.85em;
+    color: #ccc;
+    flex: 1;
+    min-width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* 色スウォッチ */
+.track-color-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+
+.track-color-swatch {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    border: 2px solid #666;
+    cursor: pointer;
+    transition: border-color 0.15s;
+    flex-shrink: 0;
+}
+
+.track-color-wrap:hover .track-color-swatch {
+    border-color: #aaa;
+}
+
+.track-color-input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+}
+
+/* 音量スライダー */
+.track-vol-wrap {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    flex-shrink: 0;
+}
+
+.track-vol-label {
+    font-size: 0.75em;
+    color: #888;
+    white-space: nowrap;
+}
+
+.track-vol-slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 90px;
+    height: 4px;
+    border-radius: 2px;
+    background: #444;
+    outline: none;
+    cursor: pointer;
+}
+
+.track-vol-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: #aaa;
+    cursor: pointer;
+}
+
+.track-vol-slider::-webkit-slider-thumb:hover {
+    background: #fff;
+}
+
+.track-vol-slider::-moz-range-thumb {
+    width: 12px;
+    height: 12px;
+    border: none;
+    border-radius: 50%;
+    background: #aaa;
+    cursor: pointer;
+}
+
+.track-vol-value {
+    font-size: 0.72em;
+    color: #888;
+    min-width: 3.5em;
+    text-align: right;
+}
